@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.container-ring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-ring .ring-lucky {
+    border: 2px solid;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-ring .ring-lucky .btn-turned {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: green;
+    box-shadow: .1px .1px 15px green;
+}
+
+
+
+.container-ring .ring-lucky .btn-turned::before {
+    content: '';
+    border-top: 2px solid;
+    border-left: 2px solid;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    transform: rotate(45deg);
+    background-color: green;    
+}
+
+.container-ring .ring-lucky .btn-turned p {
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.container-house-player-1,
+.container-house-player-2,
+.container-house-player-3,
+.container-house-player-4 {
+    position: absolute;
+}
+
+.container-house-player-1 {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-house-player-2 {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.container-house-player-3 {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-house-player-4 {
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.container-house-player-1 .house,
+.container-house-player-2 .house,
+.container-house-player-3 .house,
+.container-house-player-4 .house {
+    border: 1px solid #c1c1c1;
+    height: 100px;
+    width: 100px;
+    box-shadow: .5px .5px 10px;
+    border-radius: 5px;
+}
+
+.container-house-player-1 .house p,
+.container-house-player-3 .house p  {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.container-house-player-2 .house p,
+.container-house-player-4 .house p  {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.container-house-player-2 .house ,
+.container-house-player-4 .house   {
+    transform: rotate(-90deg);
+}
+
